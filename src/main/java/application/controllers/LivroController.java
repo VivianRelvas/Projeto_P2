@@ -13,7 +13,7 @@ import application.models.Livro;
 import application.repositories.LivroRepository;
 import org.springframework.ui.Model;
 
-@Controller
+@Controller //essa anotação @ faz referência a proxima linha Java
 @RequestMapping("/livro")
 public class LivroController {
     @Autowired
@@ -35,18 +35,18 @@ public String formInsert(){
 
 @RequestMapping(value="/insert",method=RequestMethod.POST)
 public String saveInsert(@RequestParam("titulo")String titulo){
-    Livro livro=new Livro();
-    livro.setTitulo(titulo);
-    livrosRepo.save(livro);
+    Livro livro=new Livro(); //construtor recebendo um objeto
+    livro.setTitulo(titulo); //o metodo set vai inserir o livro
+    livrosRepo.save(livro); //objeto é livro minúsculo e fosse classe era Livro maiúsculo //Salvando o livro
     return "redirect:/livro/list";
 }
 
 @RequestMapping("/delete/{id}")
-public String formDelete(Model model,@PathVariable int id){
-    Optional<Livro>livro=livrosRepo.findById(id);
-    if (!livro.isPresent()) 
+public String formDelete(Model model,@PathVariable int id){ //@ anotação   buscar pelo parâmetro id (codigo do livro)
+    Optional<Livro>livro=livrosRepo.findById(id); //classe <Livro>  e objeto do tipo livro recebe todos os livros que tem e seus ids
+    if (!livro.isPresent()) //! inverte o que é V vira F e vice-versa
         return "redirect:/livro/list";
-     model.addAttribute("livro",livro.get());
+     model.addAttribute("livro",livro.get()); //metodo get vai mostrar o livro
  
     return "/livro/delete.jsp";
 }

@@ -17,10 +17,10 @@ public class Livro {
     private int id;   //Criando o codigo do livro id automático
     private String titulo; //Criando o titulo do livro
 
-    public int getId() {   //get vamos inserir os dados do livro
+    public int getId() {   //Usando Set e Get (inserindo e vizualizando dados do livro)
         return id;
     }
-    public void setId(int id) { //set vamos mostrar os dados inseridos do livro
+    public void setId(int id) { 
         this.id = id;
     }
     public String getTitulo() {
