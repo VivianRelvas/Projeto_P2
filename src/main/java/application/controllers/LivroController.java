@@ -28,12 +28,12 @@ public String listar(){
         return "livro/list.jsp";
 }
 
-@RequestMapping("/insert")
+@RequestMapping("/insert")  
 public String formInsert(){
     return "insert.jsp";
 }
 
-@RequestMapping(value="/insert",method=RequestMethod.POST)
+@RequestMapping(value="/insert",method=RequestMethod.POST) //@anotação para o Insert com o metodo Post
 public String saveInsert(@RequestParam("titulo")String titulo){
     Livro livro=new Livro(); //construtor recebendo um objeto
     livro.setTitulo(titulo); //o metodo set vai inserir o livro
@@ -42,17 +42,16 @@ public String saveInsert(@RequestParam("titulo")String titulo){
 }
 
 @RequestMapping("/delete/{id}")
-public String formDelete(Model model,@PathVariable int id){ //@ anotação   buscar pelo parâmetro id (codigo do livro)
+public String formDelete(Model model,@PathVariable int id){
     Optional<Livro>livro=livrosRepo.findById(id); //classe <Livro>  e objeto do tipo livro recebe todos os livros que tem e seus ids
     if (!livro.isPresent()) //! inverte o que é V vira F e vice-versa
         return "redirect:/livro/list";
      model.addAttribute("livro",livro.get()); //metodo get vai mostrar o livro
- 
-    return "/livro/delete.jsp";
+        return "/livro/delete.jsp";
 }
 
 @RequestMapping(value = "/delete",method=RequestMethod.POST)
-public String confirmDelete(@RequestParam("id")int id){
+public String confirmDelete(@RequestParam("id")int id){  //@ anotação   buscar pelo parâmetro id (codigo do livro)
    livrosRepo.deleteById(id);
         return "redirect:/livro/list";
 }

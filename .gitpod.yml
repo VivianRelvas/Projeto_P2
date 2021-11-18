@@ -1,4 +1,4 @@
-#arquivo mysql - criando o espaço de trabalho no gitpod
+#arquivo mysql - criando o espaço de trabalho no gitpod e criando o Banco de dados
 
 image: gitpod/workspace-mysql
 
