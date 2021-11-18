@@ -15,9 +15,7 @@
            <hr>
 <p>Tem certeza que deseja deletar o livro?<em>"${livro.titulo}"</em>?</p>
            <form action="/livro/delete" method="post">
-            <input type="hidden" name="id"value="${livro.id}"/> 
-               
-              
+               <input type="hidden" name="id"value="${livro.id}"/> 
                <a href="/livro/list" class="btn btn-info">Voltar</a>
                <input type="submit" value="Deletar"class="btn btn-warning"/>
            </form>

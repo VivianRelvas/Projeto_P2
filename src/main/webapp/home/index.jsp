@@ -8,5 +8,6 @@
     </head>
     <body>
         <h1>Biblioteca Virtual - Lista de Livros</h1>
+        <a href="/livro/list" class="btn btn-warning">Próxima página</a>
     </body>
 </html>

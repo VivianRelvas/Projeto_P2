@@ -23,11 +23,8 @@
                 <tr>
                     <td>${l.id}</td>
                     <td>${l.titulo}</td>
-                    <td>
-                        <a href="/livro/update/${l.id}" class="btn btn-primary">Atualizar livro</a>
-                    </td>
-                    <td> <a href="/livro/delete/${l.id}" class="btn btn-danger">Deletar livro</a></td>
-
+                    <td><a href="/livro/update/${l.id}" class="btn btn-success">Atualizar livro</a></td>
+                    <td><a href="/livro/delete/${l.id}" class="btn btn-danger">Deletar livro</a></td>
                 </tr>
 
             </c:forEach>
