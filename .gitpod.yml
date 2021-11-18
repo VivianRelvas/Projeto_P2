@@ -1,4 +1,7 @@
+#arquivo mysql - criando o espaço de trabalho no gitpod
+
 image: gitpod/workspace-mysql
 
 tasks:
   - init: mysql -u root -e "CREATE DATABASE applicationdb"
+

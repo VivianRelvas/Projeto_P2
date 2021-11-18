@@ -1,5 +1,6 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<!-Criando a página Deletar livro->
 
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html>
     <head>
@@ -12,7 +13,7 @@
       <main class="container"  >
        <h1>Deletar um livro</h1>
            <hr>
-<p>tem certeza que deseja deletar o livro<em>"${livro.titulo}"</em>?</p>
+<p>Tem certeza que deseja deletar o livro<em>"${livro.titulo}"</em>?</p>
            <form action="/livro/delete" method="post">
             <input type="hidden" name="id"value="${livro.id}"/> 
                

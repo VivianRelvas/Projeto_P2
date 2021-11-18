@@ -9,3 +9,7 @@ public class Application {
         SpringApplication.run(Application.class, args);
     }
 }
+
+//git add . - vou adicionar tudo o que foi realizado no git
+// git commit -m "descrever" - Vou descrever o que fiz para o git
+// git push - Vou gravar/salvar estes arquivos
