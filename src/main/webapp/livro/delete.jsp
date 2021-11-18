@@ -13,7 +13,7 @@
       <main class="container"  >
        <h1>Deletar um livro</h1>
            <hr>
-<p>Tem certeza que deseja deletar o livro<em>"${livro.titulo}"</em>?</p>
+<p>Tem certeza que deseja deletar o livro?<em>"${livro.titulo}"</em>?</p>
            <form action="/livro/delete" method="post">
             <input type="hidden" name="id"value="${livro.id}"/> 
                
