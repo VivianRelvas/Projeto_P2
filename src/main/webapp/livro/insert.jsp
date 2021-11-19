@@ -12,6 +12,9 @@
     <body>
        <h1>Novo Livro</h1>
            <hr>
+
+           <!-criando form, input e os botões vamos utilizar o framework bootstrap->
+           
            <form action="insert" method="post">
                <label for="titulo">Título</label>
                <input type="text" name="titulo"/>

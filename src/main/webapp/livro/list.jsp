@@ -19,10 +19,13 @@
                 <th>ID</th>
                 <th>Título</th>
             </tr>
-            <c:forEach var="l" items="${livros}">
+            <c:forEach var="l" items="${livros}">  <!- forEach é um metodo que executa/retorna elementos->
                 <tr>
-                    <td>${l.id}</td>
+                    <td>${l.id}</td>    <!-listando id e titulo do livro->
                     <td>${l.titulo}</td>
+
+                    <!-criando os botões vamos utilizar o framework bootstrap->
+
                     <td><a href="/livro/update/${l.id}" class="btn btn-success">Atualizar livro</a></td>
                     <td><a href="/livro/delete/${l.id}" class="btn btn-danger">Deletar livro</a></td>
                 </tr>
