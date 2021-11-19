@@ -13,10 +13,10 @@
            <form action= "/livro/update" method="post">
             <input type="hidden" name="id" value="${livro.id}"/>
                <label for="titulo">Título</label>
-
                <input type="text" name="titulo" value="${livro.titulo}"/>
+               
                <a href="/livro/list" class="btn btn-secondary">Voltar</a>
-               <input type="submit" class="btn btn-success" value="Salvar"/>
+               <input type="submit" value="Salvar" class="btn btn-warning"/>
            </form>
 
         

@@ -13,8 +13,8 @@
            <form action="insert" method="post">
                <label for="titulo">titulo</label>
                <input type="test" name="titulo"/>
-               <a href="/livro/list">Voltar</a>
-               input type="submit" value+"Salvar"/>
+               <a href="/livro/list" class="btn btn-secondary">Voltar</a>
+               <input type="submit" value="Salvar" class="btn btn-warning"/>
            </form>
 
         <h1>Vívian Relvas - Lista de livros!</h1>

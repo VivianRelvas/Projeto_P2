@@ -19,8 +19,8 @@
 <p>Tem certeza que deseja deletar o livro?<em>"${livro.titulo}"</em>?</p> <!-Tag para buscar o livro no Banco de Dados->
            <form action="/livro/delete" method="post">
                <input type="hidden" name="id"value="${livro.id}"/> ,<!-hidden esconde o id->
-               <a href="/livro/list" class="btn btn-info">Voltar</a>
-               <input type="submit" value="Deletar"class="btn btn-warning"/>
+               <a href="/livro/list" class="btn btn-secondary">Voltar</a>
+               <input type="submit" value="Deletar"class="btn btn-danger"/>
            </form>
 
         </main>  

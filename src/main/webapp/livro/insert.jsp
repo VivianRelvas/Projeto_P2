@@ -13,7 +13,7 @@
        <h1>Novo Livro</h1>
            <hr>
            <form action="insert" method="post">
-               <label for="titulo">titulo</label>
+               <label for="titulo">Título</label>
                <input type="text" name="titulo"/>
                <a href="/livro/list" class="btn btn-secondary">Voltar</a>
                <input type="submit" value="Salvar" class="btn btn-warning"/>
